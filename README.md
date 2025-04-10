@@ -1,2 +1,2 @@
 UwU
-https://cerebrysquad.github.io/cerebryscripts/
+https://cerebrysquad.github.io
