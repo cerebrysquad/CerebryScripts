@@ -1,0 +1,69 @@
+body, html {
+    user-select: none;
+    height: 100%;  /* Ensure body and html take up the full height */
+    margin: 0;  /* Remove default margin */
+}
+  
+.wrapper {
+    user-select: none;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center ; /* Vertically center content */
+    height: 100vh;           /* Full viewport height */
+}
+
+.filebox{
+    user-select: none;
+    background-color: #1c064738;
+   margin: 7vw;
+   align-content: space-between;
+   display: flex;
+   justify-content: space-between; /* or space-around / space-evenly */
+   align-items: center;
+   padding: 2vw;
+   border-radius: 3vw;
+}
+.file{
+    user-select: none;
+    display: flex;
+  justify-content: center;  /* Horizontally center */
+  align-items: center;      /* Vertically center */
+    background-color: black;
+    border-radius: 15%;
+    width: 7vw;
+    height: 7vw;
+    transition: 0.6s ease;
+}
+.file:hover{
+    background-color: rgb(0, 72, 77);
+    user-select: none;
+    border-radius: 15%;
+    width: 12vw;
+    height: 12vw;
+}
+
+span{
+    color: rgba(255, 255, 255, 0.527);
+    user-select: none;
+    font-size: 1em;
+    transition: 0.6s ease;
+
+}
+.file:hover span{
+    color: white;
+    font-size: 1.5em;
+
+}
+
+#nothing:hover{
+    background-color: rgb(131, 0, 0);
+
+}
+#done:hover{
+    background-color: rgb(0, 88, 19);
+}
+
+a{
+    user-select: none;
+    text-decoration: none;
+}
