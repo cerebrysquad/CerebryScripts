@@ -3,8 +3,8 @@ body {
   font-size: 16px;
   overflow: hidden;
   background: #556270;
-  -webkit-animation: changeBg 60s infinite alternate;
-          animation: changeBg 60s infinite alternate;
+  -webkit-animation: changeBg 12s infinite alternate;
+          animation: changeBg 12s infinite alternate;
 }
 
 @-webkit-keyframes changeBg {
