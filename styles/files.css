@@ -1,0 +1,138 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  user-select: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+div{
+  align-content: center;
+  text-align: center;
+  font-size: 1vw;
+  color: rgba(255, 255, 255, 0.205);
+}
+.wrapY {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wrapX {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.fileOrbit {
+  width: 36vw;
+  height: 36vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(transparent 50%, #1c064738 51%);
+  border-radius: 50%;
+  position: relative;
+
+}
+
+/* Center remains fixed */
+.orbitCenter {
+  position: absolute;
+  width: 11vw;
+  height: 11vw;
+  background-color: rgb(24, 24, 24);
+  border-radius: 20%;
+  transition: 0.85s ease;
+}
+
+.orbitCenter:hover{
+  
+  font-size: 2.5vw;
+  color: rgba(255, 255, 255, 0.705);
+  background-color: black;
+  width: 19.5vw;
+  height: 19.5vw;
+  border-radius: 50%;
+}
+
+/* Files are positioned absolutely within the orbit */
+.file {
+  position: absolute;
+  width: 11vw;
+  height: 11vw;
+  background-color: rgb(24, 24, 24);
+  border-radius: 50%;
+  transition: 0.8s ease;
+}
+
+.file:hover{
+  background-color: black;
+  font-size: 2vw;
+  color: rgba(255, 255, 255, 0.705);
+  width: 15vw;
+  height: 15vw;
+}
+
+
+:root {
+  --r: 15vw; /* Orbit radius */
+}
+
+/* Positioning for orbiting elements */
+.f1 {
+  transform: translate(calc(var(--r) * cos(0deg)), calc(var(--r) * sin(0deg)));
+}
+
+.f2 {
+  transform: translate(calc(var(--r) * cos(120deg)), calc(var(--r) * sin(120deg))) rotate(120deg);
+}
+
+.f3 {
+  transform: translate(calc(var(--r) * cos(240deg)), calc(var(--r) * sin(240deg))) rotate(240deg);
+}
+
+/* Second orbit positioning */
+.f4 {
+  transform: translate(calc(var(--r) * cos(0deg)), calc(var(--r) * sin(0deg))) rotate(180deg);
+}
+
+.f5 {
+  transform: translate(calc(var(--r) * cos(120deg)), calc(var(--r) * sin(120deg))) rotate(300deg);
+}
+
+.f6 {
+  transform: translate(calc(var(--r) * cos(240deg)), calc(var(--r) * sin(240deg))) rotate(420deg);
+}
+
+/* Rotation for the fileOrbit only */
+.o1, .c2 {
+  animation: rotate 30s infinite linear;
+}
+.c1, .o2{
+    animation: anti-rotate 30s infinite linear;
+}
+
+/* Rotation animation for the orbits */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes anti-rotate {
+    0% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
